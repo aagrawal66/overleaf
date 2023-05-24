@@ -1,0 +1,26 @@
+\section{Theory and Setup}
+\begin{equation*}
+    \begin{split}
+        \delta &=  .25 \\ 
+        \omega_{rl} &= .025\\
+        \theta_{drift} &= .5 \\
+    \end{split}
+\end{equation*}
+In these areas, no thrusting is applied. Jang et al. in \cite{jang2010} provided succinct firing logic above and below the attitude hold channel, which is described below and applied in this project. The overall firing logic is provided in \ref{firing_logic}.  
+\begin{equation*}
+    \begin{split}
+        k_p &= 1 \\
+        k_d &= \frac{\delta}{\omega_{RL}} \\
+        k_p\theta + k_d\dot{\theta} &< -\delta \,\,\, \sq{\text{Positive Firing}} \\
+        k_p\theta + k_d\dot{\theta} &> \delta \,\,\,\,\,\,\, \sq{\text{Negative Firing}} \\
+    \end{split}
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.15\textwidth]{p1_figs/p1_010.png}
+    \caption{Designed Linear Phase Plane}
+    \label{fig:p1_lpp}
+\end{figure}
+The code used to generate the phase plane figure is provided below. 
+% \begin{lstlisting}
+% \end{lstlisting}
